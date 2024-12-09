@@ -5,6 +5,9 @@ RUN apk update && apk add /bin/sh
 
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
+ENV MONGO_DB_HOSTNAME mongo
+ENV MONGO_DB_USERNAME admin
+ENV MONGO_DB_PASSWORD admin
 
 COPY target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
